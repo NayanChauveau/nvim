@@ -20,5 +20,10 @@ null_ls.setup {
     formatting.stylua,
     formatting.google_java_format,
     diagnostics.flake8,
+    diagnostics.eslint_d,
+    formatting.eslint_d,
   },
 }
+
+-- Format on save
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
